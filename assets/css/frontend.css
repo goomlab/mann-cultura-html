@@ -16,7 +16,7 @@
 
 .btn, .btn-download > span:last-child,
 .btn-download:hover > span:last-child,
-.btn-download:visited > span:last-child, .single-event h1, .event-details li > span:last-child {
+.btn-download:visited > span:last-child, #intro > span > span:last-child, #intro.logo > span > span:last-child, .single-event h1, .event-details li > span:last-child {
   font-family: "Mann";
   font-weight: 700;
   font-style: normal;
@@ -177,6 +177,25 @@ header .navbar-menu li {
   padding-right: 10px;
 }
 
+header .navbar-menu li > a {
+  display: block;
+}
+
+header .navbar-menu .svg {
+  filter: invert(0%) sepia(1%) saturate(790%) hue-rotate(356deg) brightness(94%) contrast(86%);
+}
+
+header .navbar-menu .icon.radio {
+  position: relative;
+  top: -8px;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-image: url(../images/icons/radio-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 header .navbar-toggler {
   position: relative;
   width: 31px;
@@ -186,7 +205,7 @@ header .navbar-toggler {
 
 header .navbar-toggler span {
   display: block;
-  background-color: #464646;
+  background-color: #121212;
   height: 3px;
   width: 100%;
   margin-bottom: 8px;
@@ -242,7 +261,7 @@ header .navbar-btn-projects > span {
   display: block;
   width: 7px;
   height: 7px;
-  background-color: #464646;
+  background-color: #121212;
   border-radius: 50%;
 }
 
@@ -260,8 +279,8 @@ header .navbar-btn-projects > span:nth-child(8) {
   margin-right: 3px;
 }
 
-header .navbar-btn-projects:not(.collapsed) {
-  opacity: 0.5;
+header .navbar-btn-projects:not(.collapsed) > span {
+  background-color: #464646;
 }
 
 .navbar-btn-projects,
@@ -281,6 +300,22 @@ body.dark header .navbar-toggler span {
 
 body.dark header .navbar-btn-projects > span {
   background-color: #FFF;
+}
+
+body.dark header .navbar-btn-projects:not(.collapsed) {
+  opacity: .5;
+}
+
+body.dark header .navbar-btn-projects:not(.collapsed) > span {
+  background-color: #FFF;
+}
+
+body.dark header .navbar-menu .svg {
+  filter: invert(100%) sepia(14%) saturate(7390%) hue-rotate(290deg) brightness(126%) contrast(94%);
+}
+
+body.dark header .navbar-menu .icon.radio {
+  background-image: url(../images/icons/radio-white.svg);
 }
 
 html, body {
@@ -567,7 +602,9 @@ body > .app {
   position: fixed;
   top: 0;
   left: 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40vw;
   width: 40vw;
   background-image: url(../images/logo-background.svg);
@@ -599,10 +636,47 @@ body > .app {
   z-index: 10;
 }
 
+#intro > span > span:first-child {
+  display: block;
+  width: 260px;
+  height: 100px;
+  background-image: url(../images/icons/logo-mann-unina-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  transition: all .5s;
+}
+
+#intro > span > span:last-child {
+  font-size: 68px;
+  color: #FFF;
+  line-height: 1.1;
+  transition: all .5s;
+}
+
 #intro.logo {
   width: 300px;
   height: 300px;
   z-index: 1034;
+}
+
+#intro.logo > span {
+  z-index: 11;
+}
+
+#intro.logo > span > span:first-child {
+  display: block;
+  width: 170px;
+  height: 70px;
+  background-image: url(../images/icons/logo-mann-unina-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#intro.logo > span > span:last-child {
+  font-size: 34px;
+  color: #121212;
 }
 
 #intro.logo::before {
@@ -830,7 +904,7 @@ body > .app {
 
 #page:not(.front-page) #intro,
 #menu-home-projects #intro {
-  transform: translate(-25%, -25%);
+  transform: translate(-8%, -8%);
 }
 
 #page:not(.front-page) .orbits #orbit-1, #page:not(.front-page) .orbits #orbit-2, #page:not(.front-page) .orbits #orbit-3,

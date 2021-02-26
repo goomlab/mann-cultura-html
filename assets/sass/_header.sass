@@ -12,6 +12,19 @@ header
         li
             padding-left: 10px
             padding-right: 10px
+            > a
+                display: block
+        .svg 
+            filter: invert(0%) sepia(1%) saturate(790%) hue-rotate(356deg) brightness(94%) contrast(86%)
+        .icon.radio
+            position: relative
+            top: -8px
+            display: inline-block
+            width: 35px
+            height: 35px
+            background-image: url(../images/icons/radio-black.svg)
+            background-repeat: no-repeat
+            background-position: center
     .navbar-toggler
         position: relative
         width: 31px
@@ -19,7 +32,7 @@ header
         padding: 0
         span
             display: block
-            background-color: $color-02
+            background-color: $color-01
             height: 3px
             width: 100%
             margin-bottom: 8px
@@ -84,7 +97,7 @@ header
             display: block
             width: 7px
             height: 7px
-            background-color: $color-02
+            background-color: $color-01
             -webkit-border-radius: 50%
             -moz-border-radius: 50%
             border-radius: 50%
@@ -100,7 +113,9 @@ header
             margin-right: 3px
         // transition: opacity .35s
         &:not(.collapsed)
-            opacity: 0.5
+            // opacity: 0.5
+            > span
+                background-color: $color-02
 
 .navbar-btn-projects,
 .navbar-toggler
@@ -118,3 +133,12 @@ body.dark header
     .navbar-btn-projects
         > span
             background-color: $color-ff
+        &:not(.collapsed)
+            opacity: .5
+            > span
+                background-color: $color-ff
+    .navbar-menu
+        .svg
+            filter: invert(100%) sepia(14%) saturate(7390%) hue-rotate(290deg) brightness(126%) contrast(94%)
+        .icon.radio
+            background-image: url(../images/icons/radio-white.svg)
