@@ -276,9 +276,24 @@
         @extend %font-1-light
         font-size: 28px
         margin-bottom: 80px
+    .figure-wrap.fancybox
+        display: block
+        position: relative
+        &::after
+            content: ""
+            position: absolute
+            top: 5px
+            right: 5px
+            display: block
+            width: 40px
+            height: 40px
+            background-image: url(../images/icons/zoom-out.svg)
+            background-repeat: no-repeat
+            background-position: center 
 
 
-
+#accordion
+    margin-bottom: 60px
 .accordion-card
     .accordion-card-header
         border-top: solid 1px $color-01
@@ -338,11 +353,15 @@
                         background: $color-ff
                     &::after
                         height: 10px
-        
-            
     .accordion-card-body
         padding: 15px 30px
         border-top: solid 1px $color-01
+    &:last-child
+        .accordion-card-header,
+        .accordion-card-body
+            border-bottom: solid 1px $color-01
+        .accordion-card-body
+            border-top: none
 
 
 
@@ -422,3 +441,24 @@
         background-image: url(../images/icons/arrow-2-black-prev.svg)
         &:hover
             margin-left: -5px
+
+
+
+
+
+.project-orbit
+    position: absolute
+    top: calc(50% - 215px)
+    // bottom: 0
+    left: calc((430px - 8.33vw + 30px) * -1)
+    display: block
+    width: 420
+    height: 420
+    background-color: $color-01
+    -webkit-border-radius: 50%
+    -moz-border-radius: 50%
+    border-radius: 50%
+    -webkit-filter: blur(30px)
+    -moz-filter: blur(30px)
+    -o-filter: blur(30px)
+    -ms-filter: blur(30px)

@@ -126,7 +126,8 @@
 
 .orbit-container
     z-index: -1
-.orbits
+.orbits,
+.orbits-copy
     position: fixed
     top: 0
     left: 0
@@ -198,7 +199,10 @@
         // left: calc( 50vw - 50vw )
         top: calc( 50vh - 48vw )
         left: calc( 50vw - 48vw )
+        opacity: 1
+        visibility: visible
         transform: rotate(-130deg)
+        transition: opacity .5s, visibility .5s
         .inner-orbit-cirlce
             position: absolute
             top: 50%
@@ -211,6 +215,9 @@
             -moz-filter: blur(30px)
             -o-filter: blur(30px)
             -ms-filter: blur(30px)
+        &.none
+            opacity: 0
+            visibility: hidden
     #orbit-3
         position: absolute
         top: calc( 50vh - 70vw )

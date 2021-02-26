@@ -6,13 +6,17 @@
   font-style: normal;
 }
 
-.project-item .content .title, .event-item .title, .event-item .figure-wrap .circle, .event-item .figure-wrap .circle > a, .event-item .figure-wrap .circle > span {
+.btn-download,
+.btn-download:hover,
+.btn-download:visited, .project-item .content .title, .event-item .title, .event-item .figure-wrap .circle, .event-item .figure-wrap .circle > a, .event-item .figure-wrap .circle > span {
   font-family: "Mann";
   font-weight: 400;
   font-style: normal;
 }
 
-.btn {
+.btn, .btn-download > span:last-child,
+.btn-download:hover > span:last-child,
+.btn-download:visited > span:last-child {
   font-family: "Mann";
   font-weight: 700;
   font-style: normal;
@@ -483,6 +487,45 @@ body > .app {
   transform-origin: 50% 50%;
 }
 
+.btn-download,
+.btn-download:hover,
+.btn-download:visited {
+  position: relative;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  text-align: left;
+  background-color: #121212;
+  color: #FFF;
+  padding: 15px 60px 15px 30px;
+  border-radius: 50px;
+}
+
+.btn-download > span,
+.btn-download:hover > span,
+.btn-download:visited > span {
+  display: block;
+}
+
+.btn-download > span:last-child,
+.btn-download:hover > span:last-child,
+.btn-download:visited > span:last-child {
+  text-decoration: underline;
+}
+
+.btn-download::after,
+.btn-download:hover::after,
+.btn-download:visited::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 14px);
+  right: 15px;
+  display: block;
+  width: 21px;
+  height: 28px;
+  background-image: url(../images/icons/arrow-download.svg);
+}
+
 @keyframes magicIntroAnimate {
   0% {
     opacity: 0;
@@ -637,7 +680,8 @@ body > .app {
   z-index: -1;
 }
 
-.orbits {
+.orbits,
+.orbits-copy {
   position: fixed;
   top: 0;
   left: 0;
@@ -647,14 +691,16 @@ body > .app {
   height: 100vh;
 }
 
-.orbits #orbit-1 {
+.orbits #orbit-1,
+.orbits-copy #orbit-1 {
   position: absolute;
   top: calc( 50vh - 30vw);
   left: calc( 50vw - 30vw);
   animation: spin-right 10s linear infinite;
 }
 
-.orbits #orbit-1 .inner-orbit-cirlce {
+.orbits #orbit-1 .inner-orbit-cirlce,
+.orbits-copy #orbit-1 .inner-orbit-cirlce {
   position: absolute;
   top: 50%;
   left: 60px;
@@ -668,14 +714,16 @@ body > .app {
   -ms-filter: blur(2px);
 }
 
-.orbits #orbit-1-1 {
+.orbits #orbit-1-1,
+.orbits-copy #orbit-1-1 {
   position: absolute;
   top: calc( 50vh - 30vw);
   left: calc( 50vw - 30vw);
   transform: rotate(30deg);
 }
 
-.orbits #orbit-1-1 .inner-orbit-cirlce {
+.orbits #orbit-1-1 .inner-orbit-cirlce,
+.orbits-copy #orbit-1-1 .inner-orbit-cirlce {
   position: absolute;
   top: 50%;
   left: -50px;
@@ -685,14 +733,16 @@ body > .app {
   background-color: #F2C53D;
 }
 
-.orbits #orbit-2 {
+.orbits #orbit-2,
+.orbits-copy #orbit-2 {
   position: absolute;
   top: calc( 50vh - 48vw);
   left: calc( 50vw - 48vw);
   animation: spin-right 20s linear infinite;
 }
 
-.orbits #orbit-2 .inner-orbit-cirlce {
+.orbits #orbit-2 .inner-orbit-cirlce,
+.orbits-copy #orbit-2 .inner-orbit-cirlce {
   position: absolute;
   top: 50%;
   left: 60px;
@@ -706,14 +756,19 @@ body > .app {
   -ms-filter: blur(2px);
 }
 
-.orbits #orbit-2-1 {
+.orbits #orbit-2-1,
+.orbits-copy #orbit-2-1 {
   position: absolute;
   top: calc( 50vh - 48vw);
   left: calc( 50vw - 48vw);
+  opacity: 1;
+  visibility: visible;
   transform: rotate(-130deg);
+  transition: opacity .5s, visibility .5s;
 }
 
-.orbits #orbit-2-1 .inner-orbit-cirlce {
+.orbits #orbit-2-1 .inner-orbit-cirlce,
+.orbits-copy #orbit-2-1 .inner-orbit-cirlce {
   position: absolute;
   top: 50%;
   left: -170px;
@@ -727,14 +782,22 @@ body > .app {
   -ms-filter: blur(30px);
 }
 
-.orbits #orbit-3 {
+.orbits #orbit-2-1.none,
+.orbits-copy #orbit-2-1.none {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.orbits #orbit-3,
+.orbits-copy #orbit-3 {
   position: absolute;
   top: calc( 50vh - 70vw);
   left: calc( 50vw - 70vw);
   animation: spin-right 15s linear infinite;
 }
 
-.orbits #orbit-3 .inner-orbit-cirlce {
+.orbits #orbit-3 .inner-orbit-cirlce,
+.orbits-copy #orbit-3 .inner-orbit-cirlce {
   position: absolute;
   top: 50%;
   left: 40px;
@@ -1105,6 +1168,28 @@ body > .app {
   margin-bottom: 80px;
 }
 
+.single-project .figure-wrap.fancybox {
+  display: block;
+  position: relative;
+}
+
+.single-project .figure-wrap.fancybox::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../images/icons/zoom-out.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#accordion {
+  margin-bottom: 60px;
+}
+
 .accordion-card .accordion-card-header {
   border-top: solid 1px #121212;
 }
@@ -1186,6 +1271,15 @@ body > .app {
 .accordion-card .accordion-card-body {
   padding: 15px 30px;
   border-top: solid 1px #121212;
+}
+
+.accordion-card:last-child .accordion-card-header,
+.accordion-card:last-child .accordion-card-body {
+  border-bottom: solid 1px #121212;
+}
+
+.accordion-card:last-child .accordion-card-body {
+  border-top: none;
 }
 
 .swiper-box-projects {
@@ -1274,6 +1368,21 @@ body > .app {
 
 .swiper-box-projects .swiper-button-prev:hover, .swiper-box-projects .swiper-container-rtl .swiper-button-next:hover {
   margin-left: -5px;
+}
+
+.project-orbit {
+  position: absolute;
+  top: calc(50% - 215px);
+  left: calc((430px - 8.33vw + 30px) * -1);
+  display: block;
+  width: 420;
+  height: 420;
+  background-color: #121212;
+  border-radius: 50%;
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
 }
 
 .event-item .date {

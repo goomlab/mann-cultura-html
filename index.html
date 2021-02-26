@@ -9,54 +9,566 @@
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
         <link rel="stylesheet" href="assets/css/frontend.min.css" />
         <title>MANN</title>
     </head>
-    <body>
+    <body class="dark">
         <div class="app" id="index">
             <div class="page front-page" id="page">
                 <header>
+                    <nav class="navbar-box fixed-top">
+                        <div class="container-fluid">
+                            <ul class="navbar-menu">
+                                <li>
+                                    <a href="#">
+                                        <img src="assets/images/icons/radio.svg" height="27" />
+                                    </a>
+                                </li>
+                                <li>
+                                    <button class="navbar-btn-projects collapsed" type="button" data-target="#mainNavbar">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="navbar-toggler collapsed mr-auto" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
                 </header>
+
+
+                <section class="section" id="section-intro">
+                    <div class="magic-intro">
+                        <div class="orbits orbit-container" id="orbit-container">
+                            <div class="orbit" id="orbit-1">
+                                <div class="inner-orbit-cirlce"></div>
+                            </div>
+                            <div class="orbit" id="orbit-1-1">
+                                <div class="inner-orbit-cirlce"></div>
+                            </div>
+                            <div class="orbit" id="orbit-2">
+                                <div class="inner-orbit-cirlce"></div>
+                            </div>
+                            <div class="orbit" id="orbit-2-1">
+                                <div class="inner-orbit-cirlce"></div>
+                            </div>
+                            <div class="orbit" id="orbit-3">
+                                <div class="inner-orbit-cirlce"></div>
+                            </div>
+                        </div>
+
+                        <div class="orbits intro" id="intro">
+                        </div>
+                    </div>
+                </section>
+
+
                 <main>
-                    <section class="section" id="section-intro">
-                        <div class="magic-intro">
-                            <div class="" id="orbits">
-                                <div class="orbit" id="orbit-1">
-                                    <div class="inner-orbit-cirlce"></div>
-                                </div>
-                                <div class="orbit" id="orbit-2">
-                                    <div class="inner-orbit-cirlce"></div>
-                                </div>
-                                <div class="orbit" id="orbit-3">
-                                    <div class="inner-orbit-cirlce"></div>
+                    <section class="section" style="padding-top: 50%">
+                        <div class="">
+                            <div class="home-project-background" id="home-project-background-0" data-index="0">
+                                <img src="assets/images/examples/fuga.jpg" />
+                            </div>
+                            <div class="home-project-background" id="home-project-background-1" data-index="1">
+                                <img src="assets/images/examples/fuga.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-box swiper-box-home-projects">
+                            <div class="swiper-container swiper-home-projects">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide-home-project" data-index="0">
+                                        <article class="project-item green" data-index="0">
+                                            <div class="project-circle-item"></div>
+                                            <div class="content">
+                                                <figure>
+                                                    <img class="logo" src="assets/images/examples/logo-test-1.png" />
+                                                </figure>
+                                                <div class="title">
+                                                    negozio amico
+                                                </div>
+                                                <div class="content-bottom">
+                                                    <div class="description">
+                                                        Pharetra vestibulum senectus risus a ullamcorper senectus audit.
+                                                    </div>
+                                                    <a class="url" href="#">
+                                                        <img src="assets/images/icons/arrow-1-next.svg" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project" data-index="1">
+                                        <article class="project-item red" data-index="1">
+                                            <div class="project-circle-item"></div>
+                                            <div class="content">
+                                                <figure>
+                                                    <img class="logo" src="assets/images/examples/logo-test-1.png" />
+                                                </figure>
+                                                <div class="title">
+                                                    mann per il sociale
+                                                </div>
+                                                <div class="content-bottom">
+                                                    <div class="description">
+                                                        Pharetra vestibulum senectus risus a ullamcorper senectus audit.
+                                                    </div>
+                                                    <a class="url" href="#">
+                                                        <img src="assets/images/icons/arrow-1-next.svg" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item orange" data-inex="2">
+                                            <div class="project-circle-item"></div>
+                                            <div class="content">
+                                                <figure>
+                                                    <img class="logo" src="assets/images/examples/logo-test-1.png" />
+                                                </figure>
+                                                <div class="title">
+                                                    mann in campus
+                                                </div>
+                                                <div class="content-bottom">
+                                                    <div class="description">
+                                                        Pharetra vestibulum senectus risus a ullamcorper senectus audit.
+                                                    </div>
+                                                    <a class="url" href="#">
+                                                        <img src="assets/images/icons/arrow-1-next.svg" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item lightblue">
+                                            <div class="project-circle-item"></div>
+                                            <div class="content">
+                                                <figure>
+                                                    <img class="logo" src="assets/images/examples/logo-test-1.png" />
+                                                </figure>
+                                                <div class="title">
+                                                    extramann
+                                                </div>
+                                                <div class="content-bottom">
+                                                    <div class="description">
+                                                        Pharetra vestibulum senectus risus a ullamcorper senectus audit.
+                                                    </div>
+                                                    <a class="url" href="#">
+                                                        <img src="assets/images/icons/arrow-1-next.svg" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item red">
+                                            <div class="project-circle-item"></div>
+                                            <div class="title">negozio amico</div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item green">
+                                            <div class="project-circle-item"></div>
+                                            <div class="title">mann per il sociale</div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item orange">
+                                            <div class="project-circle-item"></div>
+                                            <div class="title">mann in campus</div>
+                                        </article>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-home-project">
+                                        <article class="project-item lightblue">
+                                            <div class="project-circle-item"></div>
+                                            <div class="title">extramann</div>
+                                        </article>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="orbit intro" id="intro">
+                            <div class="swiper-palette">
+                                <div class="swiper-button-next">
+                                    <svg class="circle" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <ellipse class="foreground" ry="54" rx="54" cy="58" cx="58" stroke-width="2"/> 
+                                        </g>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-prev">
+                                    <svg class="circle" xmlns="http://www.w3.org/2000/svg">
+                                        <g>
+                                            <ellipse class="foreground" ry="54" rx="54" cy="58" cx="58" stroke-width="2"/> 
+                                        </g>
+                                    </svg>
+                                </div>
                             </div>
                         </div>
                     </section>
 
 
-                    <section class="section" style="background-color: rgba(255,255,255,1)">
-                        <p>
-                            The standard Lorem Ipsum passage, used since the 1500s
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
 
-1914 translation by H. Rackham
-"But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?"
 
-Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
 
-1914 translation by H. Rackham
-"On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-                        </p>
+                    <section class="section section-main">
+                        <div class="container-full">
+                            <div class="swiper-box swiper-box-events">
+                                <div class="swiper-container swiper-events">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-slide-event">
+                                            <article class="event-item">
+                                                <div class="figure-wrap">
+                                                    <figure class="img-bgas">
+                                                        <img src="assets/images/examples/1920x1080_generico_sito-2048x1152.jpg" />
+                                                    </figure>
+                                                    <div class="category">
+                                                        altri eventi
+                                                    </div>
+                                                    <a class="circle" href="#">
+                                                        <span>
+                                                        Gaurda <img src="assets/images/icons/arrow-2-next.svg" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="date">
+                                                    luglio - ottobre 2020
+                                                </div>
+                                                <div class="title">
+                                                    I Gladiatori
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-event">
+                                            <article class="event-item">
+                                                <div class="figure-wrap">
+                                                    <figure class="img-bgas">
+                                                        <img src="assets/images/examples/slide_etruschi1.jpg" />
+                                                    </figure>
+                                                    <div class="category">
+                                                        arte
+                                                    </div>
+                                                    <a class="circle" href="#">
+                                                        <span>
+                                                        Gaurda <img src="assets/images/icons/arrow-2-next.svg" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="date">
+                                                    luglio - ottobre 2020
+                                                </div>
+                                                <div class="title">
+                                                    I Gladiatori
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-event">
+                                            <article class="event-item">
+                                                <div class="figure-wrap">
+                                                    <figure class="img-bgas">
+                                                        <img src="assets/images/examples/1920x1080_generico_sito-2048x1152.jpg" />
+                                                    </figure>
+                                                    <div class="category">
+                                                        altri eventi
+                                                    </div>
+                                                    <a class="circle" href="#">
+                                                        <span>
+                                                        Gaurda <img src="assets/images/icons/arrow-2-next.svg" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="date">
+                                                    luglio - ottobre 2020
+                                                </div>
+                                                <div class="title">
+                                                    I Gladiatori
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-event">
+                                            <article class="event-item">
+                                                <div class="figure-wrap">
+                                                    <figure class="img-bgas">
+                                                        <img src="assets/images/examples/slide_etruschi1.jpg" />
+                                                    </figure>
+                                                    <div class="category">
+                                                        arte
+                                                    </div>
+                                                    <a class="circle" href="#">
+                                                        <span>
+                                                        Gaurda <img src="assets/images/icons/arrow-2-next.svg" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="date">
+                                                    luglio - ottobre 2020
+                                                </div>
+                                                <div class="title">
+                                                    I Gladiatori
+                                                </div>
+                                            </article>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-event">
+                                            <article class="event-item">
+                                                <div class="figure-wrap">
+                                                    <figure class="img-bgas">
+                                                        <img src="assets/images/examples/1920x1080_generico_sito-2048x1152.jpg" />
+                                                    </figure>
+                                                    <div class="category">
+                                                        altri eventi
+                                                    </div>
+                                                    <a class="circle" href="#">
+                                                        <span>
+                                                        Gaurda <img src="assets/images/icons/arrow-2-next.svg" />
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                                <div class="date">
+                                                    luglio - ottobre 2020
+                                                </div>
+                                                <div class="title">
+                                                    I Gladiatori
+                                                </div>
+                                            </article>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="swiper-palette">
+                                    <div class="swiper-button-next">
+                                        <svg class="circle" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <ellipse class="foreground" ry="26" rx="26" cy="30" cx="30" stroke-width="2"/> 
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <svg class="circle" xmlns="http://www.w3.org/2000/svg">
+                                            <g>
+                                                <ellipse class="foreground" ry="26" rx="26" cy="30" cx="30" stroke-width="2"/> 
+                                            </g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
+
                 </main>
+
+
+
+
+
+                <section class="section menu-home-projects project-list" id="menu-home-projects">
+                    <div class="magic-intro fixed">
+                        <div class="orbits-copy orbit-container" id="orbit-container">
+                            <div class="orbit" id="orbit-1">
+                                <!-- <div class="inner-orbit-cirlce"></div> -->
+                            </div>
+                            <div class="orbit" id="orbit-2">
+                                <!-- <div class="inner-orbit-cirlce"></div> -->
+                            </div>
+                            <div class="orbit" id="orbit-3">
+                                <!-- <div class="inner-orbit-cirlce"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orbits-copy intro logo" id="intro">
+                    </div>
+
+
+                    <div class="container-full">
+                        <div class="row">
+                            <div class="col-xl-9 offset-xl-3">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <article class="project-item green">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item red">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item lightblue">
+                                            <a href="#">
+                                                <div class="project-circle-item">
+
+                                                </div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item lightblue">
+                                            <a href="#">
+                                                <div class="project-circle-item">
+                                                    
+                                                </div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item lightblue">
+                                            <a href="#">
+                                                <div class="project-circle-item">
+                                                    
+                                                </div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item lightblue">
+                                            <a href="#">
+                                                <div class="project-circle-item">
+                                                    
+                                                </div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item lightblue">
+                                            <a href="#">
+                                                <div class="project-circle-item">
+                                                    
+                                                </div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <article class="project-item orange">
+                                            <a href="#">
+                                                <div class="project-circle-item"></div>
+                                                <div class="content">
+                                                    <div class="title">
+                                                        extramann
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                
             </div>
         </div>
 
@@ -67,6 +579,7 @@ Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
         <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.it.min.js" integrity="sha512-0MThRHKyDbl5nH553hVBJMo2Ma7c2c5jU2bENv92XM2SVQEcQ7vepANdKiU7DLiYH9RsqESRdDpCRVkIRGtKGQ==" crossorigin="anonymous"></script>
+        <script src="assets/js/jquery.fancybox.min.js"></script>
         
         <!--scrollmagic-->
         <script src="assets/js/gsap/minified/TweenMax.min.js"></script>
@@ -80,81 +593,88 @@ Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
         <script>
             $(function () { // wait for document ready
                 // init
-                var controller = new ScrollMagic.Controller();
+                var controller;
+                var scenes = [];
             
                 var posX = (window.innerWidth / 2) - ($('#intro').width() / 2);
                 var posY = (window.innerHeight / 2) - ($('#intro').height() / 2);
 
                 var elements = [
                     {
-                        id: "#orbit-1",
+                        id: "#orbit-container",
                         class: "orbit",
                         from: {
-                            y: (window.innerHeight / 2) - ($('#orbit-1').height() / 2),
-                            x: (window.innerWidth / 2) - ($('#orbit-1').width() / 2),
+                            x: 0,
+                            y: 0
                         },
                         to: {
-                            y: "-25%",
-                            x: "-25%",
-                        }
-                    },
-                    {
-                        id: "#orbit-2",
-                        class: "orbit",
-                        from: {
-                            y: (window.innerHeight / 2) - ($('#orbit-2').height() / 2),
-                            x: (window.innerWidth / 2) - ($('#orbit-2').width() / 2),
-                        },
-                        to: {
-                            y: "-25%",
-                            x: "-25%",
-                        }
-                    },
-                    {
-                        id: "#orbit-3",
-                        class: "orbit",
-                        from: {
-                            y: (window.innerHeight / 2) - ($('#orbit-3').height() / 2),
-                            x: (window.innerWidth / 2) - ($('#orbit-3').width() / 2),
-                        },
-                        to: {
-                            y: "-25%",
-                            x: "-25%",
+                            // y: "-25%",
+                            // x: "-25%",
+                            y: function(){
+                                if( window.innerWidth <= 575 )
+                                    return "-40vh";
+                                return "-40vh";
+                            },
+                            x: function(){
+                                if( window.innerWidth <= 575 )
+                                    return "-30vw";
+                                return "-40vw";
+                            },
+                            // backgroundPosition: "right bottom"
+                            // width: "300px",
+                            // height: "300px",
+                            // y: $('#orbit-1').offset().top - 70,
+                            // x: $('#orbit-1').offset().left - 70
                         }
                     },
                     {
                         id: "#intro",
                         class: "orbit",
                         from: {
-                            y: (window.innerHeight / 2) - ($('#intro').height() / 2),
-                            x: (window.innerWidth / 2) - ($('#intro').width() / 2),
-                            // y: function(){
-                            //     return (window.innerHeight / 2) - ($('#orbit-1').height() / 2)
-                            // },
-                            // x: function(){
-                            //     return (window.innerWidth / 2) - ($('#orbit-1').width() / 2)
-                            // },
-                            // backgroundImage: "url(assets/images/logo-background.svg)"
+                            // y: (window.innerHeight / 2) - ($('#intro').height() / 2),
+                            // x: (window.innerWidth / 2) - ($('#intro').width() / 2),
+                            y: function(){
+                                return (window.innerHeight / 2) - ($('#intro').height() / 2)
+                            },
+                            x: function(){
+                                return (window.innerWidth / 2) - ($('#intro').width() / 2)
+                            },
+                            backgroundImage: "url(assets/images/logo-background.svg)"
                         },
                         to: {
-                            y: "-50px",
-                            x: "-50px",
-                            width: "300px",
-                            height: "300px",
+                            y: "-25%",
+                            x: "-25%",
+                            // y: "-25%",
+                            // x: "-25%",
+                            // width: "300px",
+                            // height: "300px",
                             // backgroundImage: "url(assets/images/logo-background-map.svg)",
-                            // ease: Power1.easeOut
+                            // ease: Linear.easeNone
                         }
                     },
+                    // {
+                    //     id: "#orbit-2-1",
+                    //     class: "orbit",
+                    //     from: {
+                    //         opacity: "1"
+                    //     },
+                    //     to: {
+                    //         opacity: "0"
+                    //     }
+                    // },
                 ]
 
 
                 function initIntro(){
-                    $('.orbit').each(function(index){
+                    controller = new ScrollMagic.Controller();
+
+                    $('.orbits').each(function(index){
                         // var tween = new TimelineMax()
                         var tween = new TimelineMax()
                             .fromTo(elements[index].id, 1, elements[index].from, elements[index].to)
-                            .fromTo("#intro", 1, {}, {className: "+=logo"})
-                        new ScrollMagic.Scene({
+                            .fromTo("#intro", 0, {}, {className: "+=logo"})
+                            .fromTo("#orbit-2-1", 0,{}, {className: "+=none"})
+                        var scene = new ScrollMagic.Scene({
                             triggerElement: "#magic-intro",
                             triggerHook: "onLeave",
                             duration: "100%"
@@ -163,9 +683,21 @@ Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
                         .setTween(tween)
                         .addIndicators() // add indicators (requires plugin)
                         .addTo(controller);
+
+                        scenes.push(scene);
                     })
                 }
                 $(document).ready(function(){
+                    initIntro()
+                })
+
+                function destroyController() {
+                    controller.destroy(true);
+                    for(i in scenes)
+                        scenes[i].destroy(true);
+                }
+                $(window).resize(function(){
+                    destroyController()
                     initIntro()
                 })
             });

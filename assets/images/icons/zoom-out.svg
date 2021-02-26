@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rettangolo_35" data-name="Rettangolo 35" width="41" height="41" fill="none" stroke="#121212" stroke-width="3"/>
+    </clipPath>
+  </defs>
+  <g id="Raggruppa_113" data-name="Raggruppa 113" transform="translate(-944 -715)">
+    <g id="Raggruppa_112" data-name="Raggruppa 112" transform="translate(944 715)">
+      <g id="Raggruppa_111" data-name="Raggruppa 111" clip-path="url(#clip-path)">
+        <line id="Linea_22" data-name="Linea 22" x2="12.835" y2="12.835" transform="translate(26.917 26.917)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Tracciato_372" data-name="Tracciato 372" d="M94.126,84.5v9.626H84.5" transform="translate(-54.374 -54.374)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Linea_23" data-name="Linea 23" x1="12.835" y1="12.835" transform="translate(1.248 1.248)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Tracciato_373" data-name="Tracciato 373" d="M3.5,13.126V3.5h9.626" transform="translate(-2.252 -2.252)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Linea_24" data-name="Linea 24" x1="12.835" y2="12.835" transform="translate(1.248 26.917)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Tracciato_374" data-name="Tracciato 374" d="M13.126,94.126H3.5V84.5" transform="translate(-2.252 -54.374)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <line id="Linea_25" data-name="Linea 25" y1="12.835" x2="12.835" transform="translate(26.917 1.248)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+        <path id="Tracciato_375" data-name="Tracciato 375" d="M84.5,3.5h9.626v9.626" transform="translate(-54.374 -2.252)" fill="none" stroke="#121212" stroke-miterlimit="10" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

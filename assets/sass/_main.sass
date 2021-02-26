@@ -166,3 +166,35 @@ body > .app
 
 
 
+.btn-download,
+.btn-download:hover,
+.btn-download:visited
+    position: relative
+    @extend %font-1-regular
+    font-weight: 400
+    font-size: 20px
+    line-height: 1
+    text-align: left
+    background-color: $color-01
+    color: $color-ff
+    padding: 15px 60px 15px 30px
+    -webkit-border-radius: 50px
+    -moz-border-radius: 50px
+    border-radius: 50px
+    > span
+        display: block
+    > span:last-child
+        @extend %font-1-bold
+        text-decoration: underline
+    &::after
+        content: ""
+        position: absolute
+        top: calc(50% - 14px)
+        right: 15px
+        display: block
+        width: 21px
+        height: 28px
+        background-image: url(../images/icons/arrow-download.svg)
+
+
+
