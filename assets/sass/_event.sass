@@ -78,12 +78,12 @@
     &:hover .figure-wrap 
         .circle
             opacity: 1
-            top: 0
-            bottom: 0
-            left: 0
-            right: 0
-            width: 100%
-            height: 100%
+            top: 15px
+            bottom: 15px
+            left: 15px
+            right: 15px
+            width: calc(100% - 30px)
+            height: calc(100% - 30px)
             > a, > span
                 opacity: 1
                 visibility: visible
@@ -143,3 +143,95 @@
         background-image: url(../images/icons/arrow-2-prev.svg)
         &:hover
             margin-left: -5px
+
+
+
+
+.single-event
+    .event-category-title
+        @extend %font-1-light
+        font-size: 20px
+        display: inline-block
+        padding: 5px 15px
+        margin-bottom: 60px
+        background-color: $color-01
+        color: $color-ff
+        -webkit-border-radius: 50px
+        -moz-border-radius: 50px
+        border-radius: 50px
+    h1
+        @extend %font-1-bold
+        font-size: 44px
+        margin-bottom: 60px
+
+
+.event-details-wrap
+    position: relative
+    &::before
+        position: absolute
+        top: -50%
+        left: 20%
+        content: ""
+        display: block
+        width: 1000px
+        height: 1000px
+        background-color: $color-00
+        -webkit-border-radius: 100%
+        -moz-border-radius: 100%
+        border-radius: 100%
+
+.event-details
+    margin: 0 0 60px 45px
+    li
+        position: relative
+        @extend %font-1-light
+        font-size: 16px
+        line-height: 1.18
+        color: $color-ff
+        margin-bottom: 30px
+        a 
+            color: $color-ff !important
+            text-decoration: underline
+        &::before
+            position: absolute
+            top: 3px
+            left: -45px
+            content: ""
+            display: block
+            width: 30px
+            height: 33px
+            background-position: top left
+            background-repeat: no-repeat
+        > span
+            display: block
+        > span:last-child
+            @extend %font-1-bold
+
+    li.map::before
+        background-image: url(../images/icons/map-light.svg)
+    li.account::before
+        background-image: url(../images/icons/account-light.svg)
+    li.info::before
+        background-image: url(../images/icons/info-light.svg)
+    li.calendar::before
+        background-image: url(../images/icons/calendar-light.svg)
+    li.time::before
+        background-image: url(../images/icons/time-light.svg)
+    li.timer::before
+        background-image: url(../images/icons/timer-light.svg)
+    li.wallet::before
+        background-image: url(../images/icons/wallet-light.svg)
+
+
+.single-event
+    .section-events
+        margin-top: 300px
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            top: 40%
+            bottom: 0
+            left: 0
+            right: 0
+            background-color: $color-00

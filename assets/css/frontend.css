@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;700&display=swap");
 @import url("../../fonts/stylesheet.css");
-.single-project .title h1, .single-project .subtitle, .event-item .date, .event-item .figure-wrap .category {
+.single-project .title h1, .single-project .subtitle, .event-item .date, .event-item .figure-wrap .category, .single-event .event-category-title, .event-details li {
   font-family: "Mann";
   font-weight: 300;
   font-style: normal;
@@ -16,7 +16,7 @@
 
 .btn, .btn-download > span:last-child,
 .btn-download:hover > span:last-child,
-.btn-download:visited > span:last-child {
+.btn-download:visited > span:last-child, .single-event h1, .event-details li > span:last-child {
   font-family: "Mann";
   font-weight: 700;
   font-style: normal;
@@ -434,6 +434,10 @@ body > .app {
 
 .section-main.only-padding-bottom {
   padding: 0 0 5rem 0;
+}
+
+.no-overflow {
+  overflow: visible;
 }
 
 .section-first-home {
@@ -1461,12 +1465,12 @@ body > .app {
 
 .event-item:hover .figure-wrap .circle {
   opacity: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  top: 15px;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
 }
 
 .event-item:hover .figure-wrap .circle > a, .event-item:hover .figure-wrap .circle > span {
@@ -1546,6 +1550,113 @@ body > .app {
 
 .swiper-box-events .swiper-button-prev:hover, .swiper-box-events .swiper-container-rtl .swiper-button-next:hover {
   margin-left: -5px;
+}
+
+.single-event .event-category-title {
+  font-size: 20px;
+  display: inline-block;
+  padding: 5px 15px;
+  margin-bottom: 60px;
+  background-color: #121212;
+  color: #FFF;
+  border-radius: 50px;
+}
+
+.single-event h1 {
+  font-size: 44px;
+  margin-bottom: 60px;
+}
+
+.event-details-wrap {
+  position: relative;
+}
+
+.event-details-wrap::before {
+  position: absolute;
+  top: -50%;
+  left: 20%;
+  content: "";
+  display: block;
+  width: 1000px;
+  height: 1000px;
+  background-color: #121212;
+  border-radius: 100%;
+}
+
+.event-details {
+  margin: 0 0 60px 45px;
+}
+
+.event-details li {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #FFF;
+  margin-bottom: 30px;
+}
+
+.event-details li a {
+  color: #FFF !important;
+  text-decoration: underline;
+}
+
+.event-details li::before {
+  position: absolute;
+  top: 3px;
+  left: -45px;
+  content: "";
+  display: block;
+  width: 30px;
+  height: 33px;
+  background-position: top left;
+  background-repeat: no-repeat;
+}
+
+.event-details li > span {
+  display: block;
+}
+
+.event-details li.map::before {
+  background-image: url(../images/icons/map-light.svg);
+}
+
+.event-details li.account::before {
+  background-image: url(../images/icons/account-light.svg);
+}
+
+.event-details li.info::before {
+  background-image: url(../images/icons/info-light.svg);
+}
+
+.event-details li.calendar::before {
+  background-image: url(../images/icons/calendar-light.svg);
+}
+
+.event-details li.time::before {
+  background-image: url(../images/icons/time-light.svg);
+}
+
+.event-details li.timer::before {
+  background-image: url(../images/icons/timer-light.svg);
+}
+
+.event-details li.wallet::before {
+  background-image: url(../images/icons/wallet-light.svg);
+}
+
+.single-event .section-events {
+  margin-top: 300px;
+  position: relative;
+}
+
+.single-event .section-events::before {
+  content: "";
+  position: absolute;
+  top: 40%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #121212;
 }
 
 html, body {
