@@ -1,0 +1,168 @@
+html, body
+    font-family: $font-1
+    font-weight: 400
+    @media screen and (max-width: 575px)
+        font-size: $font-base
+    @media screen and (min-width: 576px)
+        font-size: $font-base-sm
+    @media screen and (min-width: 768px)
+        font-size: $font-base-md
+    @media screen and (min-width: 992px)
+        font-size: $font-base-lg
+    @media screen and (min-width: 1200px)
+        font-size: $font-base-xl
+    // @media screen and (min-width: 1600px)
+    //     font-size: $font-base-xxl
+    // @media screen and (min-width: 1900px)
+    //     font-size: $font-base-xxxl
+    color: $color-01
+    line-height: 1.5
+    overflow-x: hidden
+
+body.dark
+    background-color: #000
+
+a, a:hover, a:visited
+    color: $color-10
+    text-decoration: none
+a:hover
+    opacity: 0.9
+
+h1, h2, h3, h4, h5, h6
+    @extend %font-2-bold
+
+
+    
+.z-index-1
+    z-index: 1
+.z-index-2
+    z-index: 2
+.no-padding
+    padding: 0
+
+@media screen and (max-width: 991px)
+    .no-mobile
+        display: none !important
+    .no-md-mobile
+        display: none !important
+    .mobile-order-0
+        order: 0
+    .mobile-order-1
+        order: 1
+    .mobile-order-2
+        order: 2
+@media screen and (min-width: 992px)
+    .no-desktop
+        display: none !important
+
+.animate__lazy
+    opacity: 0
+
+body > .app
+    position: relative
+    display: block
+
+.page
+    overflow-x: hidden
+
+// main
+//     padding-top: 90px
+// .front-page main
+//     padding-top: 0
+
+.container-0
+    width: 100%
+// .container-full
+//     width: 100%
+//     max-width: 1680px
+//     margin-left: auto
+//     margin-right: auto
+//     padding-left: 30px
+//     padding-right: 30px
+.container-full
+    margin: 0 8.33vw
+
+.position-relative
+    position: relative
+
+.row15
+    margin-left: -7.5px
+    margin-right: -7.5px
+    [class*="col-"]
+        padding-right: 7.5px
+        padding-left: 7.5px
+
+.bold
+    font-weight: 700
+
+.btn
+    @extend %font-1-bold
+    // font-size: .75rem
+    font-size: 1rem
+    -webkit-border-radius: 25px
+    -moz-border-radius: 25px
+    border-radius: 25px
+    // padding-left: 30px
+    // padding-right: 30px
+    &:focus
+        box-shadow: 0 0 6px $color-10
+
+
+.section
+    position: relative
+    overflow: hidden
+.section-main
+    position: relative
+    padding: 5rem 0
+    &.only-padding-top
+        padding: 5rem 0 0 0
+    &.only-padding-bottom
+        padding: 0 0 5rem 0
+
+.section-first-home
+    padding: 300px 0 0 0
+
+.section-first
+    padding-top: 300px
+
+.section-article
+    padding-top: 120px
+    padding-bottom: 120px
+
+
+
+@keyframes uparrow
+    0%
+        transform: translateY(0)
+        opacity: 0.4
+    100%
+        transform: translateY(-0.4em)
+        opacity: 0.9
+
+@keyframes downarrow 
+    0%
+        transform: translateY(0)
+        opacity: 0.4
+    100%
+        transform: translateY(0.4em)
+        opacity: 0.9
+
+.up 
+    animation: uparrow 0.6s infinite alternate ease-in-out
+    // border-bottom: 2em solid $color-10
+
+.down 
+    animation: downarrow 0.6s infinite alternate ease-in-out
+    // border-top: 2em solid $color-10
+
+.arrow-scroll
+    position: absolute
+    bottom: -15rem
+    left: 0
+    // font-family: $font-2-thin
+    font-size: 72px
+    transform-origin: 50% 50%
+
+
+
+

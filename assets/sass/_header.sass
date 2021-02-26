@@ -1,0 +1,120 @@
+header    
+    .navbar-box
+        padding-top: 40px
+    .navbar-menu
+        display: flex
+        flex-direction: row
+        align-items: flex-start
+        justify-content: flex-end
+        width: 100%
+        margin-left: -10px
+        margin-right: -10px
+        li
+            padding-left: 10px
+            padding-right: 10px
+    .navbar-toggler
+        position: relative
+        width: 31px
+        height: 27px
+        padding: 0
+        span
+            display: block
+            background-color: $color-02
+            height: 3px
+            width: 100%
+            margin-bottom: 8px
+            position: relative
+            right: 0
+            opacity: 1
+    
+            -webkit-transform: rotate(0deg)
+            -moz-transform: rotate(0deg)
+            -o-transform: rotate(0deg)
+            transform: rotate(0deg)
+    
+            &:last-child
+                width: 80%
+                margin-bottom: 0
+    
+            &:nth-child(1),
+            &:nth-child(3)
+                -webkit-transition: transform .35s ease-in-out
+                -moz-transition: transform .35s ease-in-out
+                -o-transition: transform .35s ease-in-out
+                transition: transform .35s ease-in-out
+    
+        &:not(.collapsed)
+            span:nth-child(1)
+                position: absolute
+                right: 0
+                top: 15px
+                -webkit-transform: rotate(135deg)
+                -moz-transform: rotate(135deg)
+                -o-transform: rotate(135deg)
+                transform: rotate(135deg)
+                opacity: 0.9
+    
+        &:not(.collapsed)
+            span:nth-child(2)
+                height: 8px
+                visibility: hidden
+                background-color: transparent
+    
+        &:not(.collapsed)
+            span:nth-child(3)
+                position: absolute
+                right: 0
+                top: 15px
+                -webkit-transform: rotate(-135deg)
+                -moz-transform: rotate(-135deg)
+                -o-transform: rotate(-135deg)
+                transform: rotate(-135deg)
+                opacity: 0.9
+    
+    .navbar-btn-projects
+        display: flex
+        flex-wrap: wrap
+        width: 27px
+        height: 27px
+        padding: 0
+        border: none
+        background: transparent
+        > span
+            position: relative
+            display: block
+            width: 7px
+            height: 7px
+            background-color: $color-02
+            -webkit-border-radius: 50%
+            -moz-border-radius: 50%
+            border-radius: 50%
+        > span:nth-child(4),
+        > span:nth-child(5),
+        > span:nth-child(6)
+            margin-top: 3px
+            margin-bottom: 3px
+        > span:nth-child(2),
+        > span:nth-child(5),
+        > span:nth-child(8)
+            margin-left: 3px
+            margin-right: 3px
+        // transition: opacity .35s
+        &:not(.collapsed)
+            opacity: 0.5
+
+.navbar-btn-projects,
+.navbar-toggler
+    transition: opacity .35s, visibility .35s
+    &.opacity0
+        opacity: 0
+        visibility: hidden
+
+
+
+body.dark header
+    .navbar-toggler
+        span
+            background-color: $color-ff
+    .navbar-btn-projects
+        > span
+            background-color: $color-ff

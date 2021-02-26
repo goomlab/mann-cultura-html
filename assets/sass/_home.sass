@@ -1,0 +1,259 @@
+@keyframes magicIntroAnimate
+    0%
+        opacity: 0
+        z-index: 0
+    99%
+        opacity: 1
+        z-index: 0
+    100%
+        z-index: 1
+
+
+#section-intro,
+.magic-intro
+    width: 100%
+    height: 100%
+    overflow: hidden
+    transition: all .9s
+    // z-index: 1
+    &.fixed
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: $color-00
+        z-index: 500
+
+#intro
+    position: fixed
+    top: 0
+    left: 0
+    // position: absolute
+    // top: calc( 50vh - 20vw )
+    // left: calc( 50vw - 20vw )
+    display: block
+    height: 40vw
+    width: 40vw
+    background-image: url(../images/logo-background.svg)
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    border-radius: 50%
+    transition: width .9s ease, height .9s ease
+    &::before
+        opacity: 0
+        content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        display: block
+        width: 100%
+        height: 100%
+        background-color: #fff
+        background-image: url(../images/logo-background-map.svg)
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        border-radius: 50%
+        transition: all .9s ease
+        z-index: 10
+    &.logo
+        width: 300px
+        height: 300px
+        z-index: 1034
+    &.logo::before
+        opacity: 1
+        transition: all .9s ease
+    @media screen and (max-width: 575px)
+        height: 40vw
+        width: 40vw
+        &.logo
+            width: 200px
+            height: 200px
+    @media screen and (min-width: 576px)
+        height: 40vw
+        width: 40vw
+        &.logo
+            width: 300px
+            height: 300px
+
+.orbit:not(#intro)
+    z-index: -1
+#orbit-1,
+#orbit-1-1
+    position: fixed
+    top: 0
+    left: 0
+    width: 60vw
+    height: 60vw
+    border-radius: 100%
+#orbit-1
+    border: 2px #464646 solid
+
+#orbit-2,
+#orbit-2-1
+    position: fixed
+    top: 0
+    left: 0
+    // width: 100vw
+    // height: 100vw
+    width: 96vw
+    height: 96vw
+    border-radius: 100%
+#orbit-2
+    border: 2px #464646 solid
+#orbit-3
+    position: fixed
+    top: 0
+    left: 0
+    width: 140vw
+    height: 140vw
+    border: 2px #464646 solid
+    border-radius: 100%
+
+
+
+@keyframes spin-right
+    100%
+        -webkit-transform: rotate(360deg)
+        -moz-transform: rotate(360deg)
+        -ms-transform: rotate(360deg)
+        -o-transform: rotate(360deg)
+        transform: rotate(360deg)
+
+.orbit-container
+    z-index: -1
+.orbits
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    // overflow: hidden
+    // background-image: url(../images/background.svg)
+    // background-position: center
+    // background-repeat: no-repeat
+    // background-size: cover
+    #orbit-1
+        position: absolute
+        top: calc( 50vh - 30vw )
+        left: calc( 50vw - 30vw )
+        -webkit-animation: spin-right 10s linear infinite
+        animation: spin-right 10s linear infinite
+        .inner-orbit-cirlce
+            position: absolute
+            top: 50%
+            // left: -8px
+            left: 60px
+            height: 16px
+            width: 16px
+            border-radius: 100%
+            background-color: #464646
+            -webkit-filter: blur(2px)
+            -moz-filter: blur(2px)
+            -o-filter: blur(2px)
+            -ms-filter: blur(2px)
+    #orbit-1-1
+        position: absolute
+        top: calc( 50vh - 30vw )
+        left: calc( 50vw - 30vw )
+        transform: rotate(30deg)
+        .inner-orbit-cirlce
+            position: absolute
+            top: 50%
+            left: -50px
+            height: 100px
+            width: 100px
+            border-radius: 100%
+            background-color: $color-20
+    #orbit-2
+        position: absolute
+        // top: calc( 50vh - 50vw )
+        // left: calc( 50vw - 50vw )
+        top: calc( 50vh - 48vw )
+        left: calc( 50vw - 48vw )
+        -webkit-animation: spin-right 20s linear infinite
+        animation: spin-right 20s linear infinite
+        .inner-orbit-cirlce
+            position: absolute
+            top: 50%
+            // left: -15px
+            left: 60px
+            height: 30px
+            width: 30px
+            border-radius: 100%
+            background-color: #464646
+            -webkit-filter: blur(2px)
+            -moz-filter: blur(2px)
+            -o-filter: blur(2px)
+            -ms-filter: blur(2px)
+    #orbit-2-1
+        position: absolute
+        // top: calc( 50vh - 50vw )
+        // left: calc( 50vw - 50vw )
+        top: calc( 50vh - 48vw )
+        left: calc( 50vw - 48vw )
+        transform: rotate(-130deg)
+        .inner-orbit-cirlce
+            position: absolute
+            top: 50%
+            left: -170px
+            height: 340px
+            width: 340px
+            border-radius: 100%
+            background-color: $color-50
+            -webkit-filter: blur(30px)
+            -moz-filter: blur(30px)
+            -o-filter: blur(30px)
+            -ms-filter: blur(30px)
+    #orbit-3
+        position: absolute
+        top: calc( 50vh - 70vw )
+        left: calc( 50vw - 70vw )
+        -webkit-animation: spin-right 15s linear infinite
+        animation: spin-right 15s linear infinite
+        .inner-orbit-cirlce
+            position: absolute
+            top: 50%
+            // left: -20px
+            left: 40px
+            height: 40px
+            width: 40px
+            border-radius: 100%
+            background-color: #464646
+            -webkit-filter: blur(2px)
+            -moz-filter: blur(2px)
+            -o-filter: blur(2px)
+            -ms-filter: blur(2px)
+
+
+
+#page:not(.front-page),
+#menu-home-projects
+    #section-intro,
+    .magic-intro
+        &.fixed
+            background-color: transparent
+            z-index: -1
+    #orbit-container
+        transform: translate(-40vw, -40vh)
+    #intro
+        transform: translate(-25%, -25%)
+        // &.logo
+        //     z-index: 1034
+    .orbits
+        #orbit-1, #orbit-2, #orbit-3
+            border: 2px rgba(70,70,70,.1) solid
+            .inner-orbit-cirlce
+                background-color: rgba(70,70,70,.1)
+#menu-home-projects
+    .orbits
+        #orbit-1, #orbit-2, #orbit-3
+            border: 2px rgba(70,70,70,1) solid
+            .inner-orbit-cirlce
+                background-color: rgba(70,70,70,1)

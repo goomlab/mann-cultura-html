@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Mann';
+    src: url('Mann-Regular.eot');
+    src: url('Mann-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Mann-Regular.woff2') format('woff2'),
+        url('Mann-Regular.woff') format('woff'),
+        url('Mann-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mann';
+    src: url('Mann-Light.eot');
+    src: url('Mann-Light.eot?#iefix') format('embedded-opentype'),
+        url('Mann-Light.woff2') format('woff2'),
+        url('Mann-Light.woff') format('woff'),
+        url('Mann-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mann';
+    src: url('Mann-Bold.eot');
+    src: url('Mann-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Mann-Bold.woff2') format('woff2'),
+        url('Mann-Bold.woff') format('woff'),
+        url('Mann-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
