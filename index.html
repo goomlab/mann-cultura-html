@@ -651,7 +651,7 @@
                             x: function(){
                                 return (window.innerWidth / 2) - ($('#intro').width() / 2)
                             },
-                            scale: 1,
+                            // scale: 1,
                             // backgroundImage: "url(assets/images/logo-background.svg)"
                         },
                         to: {
@@ -660,8 +660,21 @@
                             // scale: 0.9,
                             // y: "-25%",
                             // x: "-25%",
-                            width: "300px",
-                            height: "300px",
+                            // width: "300px",
+                            // height: "300px",
+                            zIndex: "1034",
+                            width: function(){
+                                if(window.innerWidth <= 991)
+                                    return "200px";
+                                if(window.innerWidth > 992)
+                                    return "300px";
+                            },
+                            height: function(){
+                                if(window.innerWidth <= 991)
+                                    return "200px";
+                                if(window.innerWidth > 992)
+                                    return "300px";
+                            },
                             // backgroundImage: "url(assets/images/logo-background-map.svg)",
                             // ease: Linear.easeNone
                             className: "+=logo"

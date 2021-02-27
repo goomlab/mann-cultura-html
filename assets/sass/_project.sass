@@ -82,6 +82,33 @@
     &.lightblue
         .project-circle-item::before
             background-color: #0091C7
+    @media screen and (max-width: 991px)
+        .project-circle-item
+            flex-grow: 1
+            flex: 0 0 60px
+        .project-circle-item,
+        .project-circle-item::before
+            display: block
+            width: 60px
+            height: 60px
+        .content 
+            min-width: 300px
+            .title
+                font-size: 24px
+            .description
+                top: 0
+                font-size: 16px
+                line-height: 1.1
+            .content-bottom
+                top: 40px
+            .url img
+                width: 30px
+        &.show
+            .project-circle-item::before
+                top: calc(50% - 165px)
+                left: 50px
+                width: 330px
+                height: 330px
 
 
 .home-project-background
@@ -210,10 +237,13 @@
     bottom: 0
     background-color: rgba(0,0,0,1)
     overflow-y: scroll
-    padding: 100px 0
     transition: opacity .9s, visibility .9s
     -ms-overflow-style: none
     scrollbar-width: none
+    @media screen and (max-width: 991px)
+        padding: 210px 0
+    @media screen and (min-width: 992px)
+        padding: 100px 0
     &::-webkit-scrollbar
         display: none
     &.show
@@ -243,18 +273,19 @@
             // -webkit-animation-duration: 100s
             // -webkit-animation-timing-function: linear
             // -webkit-animation-iteration-count: infinite
-        &:hover
-            .project-circle-item::before
-                top: -14px
-                left: -14px
-                width: 128px
-                height: 128px
-            .project-circle-item::after
-                transform: translateX(20%)
-                opacity: 1
-                visibility: visible
-            .title
-                margin-left: 14px
+        @media screen and (min-width: 992px)
+            &:hover
+                .project-circle-item::before
+                    top: -14px
+                    left: -14px
+                    width: 128px
+                    height: 128px
+                .project-circle-item::after
+                    transform: translateX(20%)
+                    opacity: 1
+                    visibility: visible
+                .title
+                    margin-left: 14px
 
 .project-list-box
     border-top: solid 2px $color-01
@@ -279,6 +310,7 @@
     .figure-wrap.fancybox
         display: block
         position: relative
+        margin-bottom: 80px
         &::after
             content: ""
             position: absolute
@@ -362,6 +394,10 @@
             border-bottom: solid 1px $color-01
         .accordion-card-body
             border-top: none
+    @media screen and (max-width: 767px)
+        .accordion-card-header
+            h5
+                font-size: 22px
 
 
 
@@ -441,6 +477,18 @@
         background-image: url(../images/icons/arrow-2-black-prev.svg)
         &:hover
             margin-left: -5px
+
+    @media screen and (max-width: 767px)
+        height: calc((60px + 60px) * 3)
+        margin-right: 30px 
+        .swiper-container
+            height: calc((60px + 60px) * 3)
+            width: calc(100% - 8.33% - 30px)
+    @media screen and (min-width: 768px)
+        height: calc((100px + 60px) * 3)
+        .swiper-container
+            height: calc((100px + 60px) * 3)
+            width: calc(100% - 8.33%)
 
 
 

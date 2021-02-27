@@ -198,16 +198,16 @@ $('.swiper-container').each(function(index){
         nextEl: '.swiper-button-next-' + index,
         prevEl: '.swiper-button-prev-' + index,
       },
-      // breakpoints: {
-      //   768: {
-      //     slidesPerView: 2,
-      //     spaceBetween: 30,
-      //   },
-      //   992: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 60,
-      //   }
-      // }
+      breakpoints: {
+        1: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 60,
+        },
+      }
     });
   }
   if( $(this).hasClass('swiper-events') ){
@@ -226,6 +226,10 @@ $('.swiper-container').each(function(index){
         prevEl: '.swiper-button-prev-' + index,
       },
       breakpoints: {
+        1: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
         768: {
           slidesPerView: 2,
           spaceBetween: 30,

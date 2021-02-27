@@ -99,18 +99,31 @@
     &.logo::before
         opacity: 1
         transition: all .9s ease
-    @media screen and (max-width: 575px)
-        height: 40vw
-        width: 40vw
+    @media screen and (max-width: 991px)
+        height: 90vw
+        width: 90vw
+        > span
+            > span:first-child
+                width: 90%
+                height: 100px
+            > span:last-child
+                // font-size: 38px
+                font-size: 9vw
         &.logo
             width: 200px
             height: 200px
-    @media screen and (min-width: 576px)
-        height: 40vw
-        width: 40vw
-        &.logo
-            width: 300px
-            height: 300px
+            > span
+                > span:first-child
+                    width: 90%
+                    height: 60px
+                > span:last-child
+                    font-size: 18px
+    @media screen and (min-width: 768px)
+        height: 50vw
+        width: 50vw
+    //     &.logo
+    //         width: 300px
+    //         height: 300px
 
 .orbit:not(#intro)
     z-index: -1
@@ -145,6 +158,8 @@
     height: 140vw
     border: 2px #464646 solid
     border-radius: 100%
+
+
 
 
 
@@ -204,6 +219,8 @@
             width: 100px
             border-radius: 100%
             background-color: $color-20
+        @media screen and (max-width: 575px)
+            display: none !important
     #orbit-2
         position: absolute
         // top: calc( 50vh - 50vw )
@@ -250,6 +267,8 @@
         &.none
             opacity: 0
             visibility: hidden
+        // @media screen and (max-width: 575px)
+        //     display: none !important
     #orbit-3
         position: absolute
         top: calc( 50vh - 70vw )
@@ -269,6 +288,32 @@
             -moz-filter: blur(2px)
             -o-filter: blur(2px)
             -ms-filter: blur(2px)
+
+
+@media screen and (max-width: 767px)
+    #orbit-1,
+    #orbit-1-1
+        width: 120vw
+        height: 120vw
+    #orbit-2,
+    #orbit-2-1
+        width: 180vw
+        height: 180vw
+    #orbit-3
+        width: 240vw
+        height: 240vw
+    .orbits,
+    .orbits-copy
+        #orbit-1
+            top: calc( 50vh - 60vw )
+            left: calc( 50vw - 60vw )
+        #orbit-2
+            top: calc( 50vh - 90vw )
+            left: calc( 50vw - 90vw )
+        #orbit-3
+            top: calc( 50vh - 120vw )
+            left: calc( 50vw - 120vw )
+
 
 
 
