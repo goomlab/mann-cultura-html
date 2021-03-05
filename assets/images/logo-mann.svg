@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="226.823" height="83.247" viewBox="0 0 226.823 83.247">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rettangolo_640" data-name="Rettangolo 640" width="226.823" height="83.247" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Raggruppa_146" data-name="Raggruppa 146" transform="translate(0 0)">
+    <g id="Raggruppa_147" data-name="Raggruppa 147">
+      <g id="Raggruppa_146-2" data-name="Raggruppa 146" clip-path="url(#clip-path)">
+        <text id="museo_" data-name="museo " transform="translate(101.453 17.18)" fill="#fff" font-size="20" font-family="Helvetica-Light, Helvetica" font-weight="300"><tspan x="0" y="0">museo </tspan></text>
+      </g>
+    </g>
+    <text id="archeologico" transform="translate(101.453 35.568)" fill="#fff" font-size="20" font-family="Helvetica-Light, Helvetica" font-weight="300"><tspan x="0" y="0" letter-spacing="-0.002em">a</tspan><tspan y="0" letter-spacing="-0.001em">r</tspan><tspan y="0" letter-spacing="-0.002em">c</tspan><tspan y="0" letter-spacing="-0.001em">h</tspan><tspan y="0" letter-spacing="-0.002em">e</tspan><tspan y="0" letter-spacing="-0.001em">ol</tspan><tspan y="0" letter-spacing="-0.002em">o</tspan><tspan y="0" letter-spacing="-0.001em">gi</tspan><tspan y="0" letter-spacing="-0.002em">c</tspan><tspan y="0">o</tspan></text>
+    <text id="nazionale" transform="translate(101.453 53.948)" fill="#fff" font-size="20" font-family="Helvetica-Light, Helvetica" font-weight="300"><tspan x="0" y="0">nazionale</tspan></text>
+    <text id="di_napoli" data-name="di napoli" transform="translate(101.453 72.328)" fill="#fff" font-size="20" font-family="Helvetica-Light, Helvetica" font-weight="300"><tspan x="0" y="0">di napoli</tspan></text>
+    <g id="Raggruppa_149" data-name="Raggruppa 149">
+      <g id="Raggruppa_148" data-name="Raggruppa 148" clip-path="url(#clip-path)">
+        <path id="Tracciato_6857" data-name="Tracciato 6857" d="M87.8,6.768V54.959L65.382,7.047H56.32l-.712,1.839L37.275,56.244,17.853,7.047H8.143V63c0,6.108-.836,7.674-5.736,7.674H0v1.483H9.615v-59H9.8L32.74,70.67h.831L57.149,9.909l1.528,3.952L85.438,72.429h3.846V13.244c0-3.793.742-5,4.806-5h4.07V6.768Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

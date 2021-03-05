@@ -5,6 +5,8 @@
         opacity: 1
 
 .event-item
+    > a
+        display: block
     .date
         @extend %font-1-light
         font-size: 20px
@@ -75,18 +77,19 @@
                 transition: opacity .5s .2s
                 opacity: 0
                 visibility: hidden
-    &:hover .figure-wrap 
-        .circle
-            opacity: 1
-            top: 15px
-            bottom: 15px
-            left: 15px
-            right: 15px
-            width: calc(100% - 30px)
-            height: calc(100% - 30px)
-            > a, > span
+    @media screen and (min-width: 992px)
+        &:hover .figure-wrap 
+            .circle
                 opacity: 1
-                visibility: visible
+                top: 15px
+                bottom: 15px
+                left: 15px
+                right: 15px
+                width: calc(100% - 30px)
+                height: calc(100% - 30px)
+                > a, > span
+                    opacity: 1
+                    visibility: visible
 
 
 
@@ -126,11 +129,12 @@
                 transform-origin: 50% 50%
                 transform: rotate(-270deg)
                 transition: all 800ms ease
-        &:hover
-            .circle 
-                .foreground
-                    stroke-dashoffset: 0
-                    transform: rotate(-90deg)
+        @media screen and (min-width: 992px)
+            &:hover
+                .circle 
+                    .foreground
+                        stroke-dashoffset: 0
+                        transform: rotate(-90deg)
     .swiper-palette
         position: absolute
         bottom: 0

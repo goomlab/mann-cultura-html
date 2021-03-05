@@ -111,6 +111,19 @@
                 height: 330px
 
 
+@media screen and (max-width: 991px)
+    .section-home-project-desktop
+        display: none
+    .section-home-project-mobile
+        display: block
+        .project-item
+            margin-bottom: 60px
+@media screen and (min-width: 992px)
+    .section-home-project-desktop
+        display: block
+    .section-home-project-mobile
+        display: none
+
 .home-project-background
     position: fixed
     top: 0
@@ -177,10 +190,11 @@
                 transform-origin: 50% 50%
                 transform: rotate(-270deg)
                 transition: all 800ms ease
-        &:hover
-            .circle .foreground
-                stroke-dashoffset: 0
-                transform: rotate(-90deg)
+        @media screen and (min-width: 992px)
+            &:hover
+                .circle .foreground
+                    stroke-dashoffset: 0
+                    transform: rotate(-90deg)
     .swiper-palette
         position: absolute
         bottom: 50px
@@ -459,10 +473,11 @@
                 transform-origin: 50% 50%
                 transform: rotate(-270deg)
                 transition: all 800ms ease
-        &:hover
-            .circle .foreground
-                stroke-dashoffset: 0
-                transform: rotate(-90deg)
+        @media screen and (min-width: 992px)
+            &:hover
+                .circle .foreground
+                    stroke-dashoffset: 0
+                    transform: rotate(-90deg)
     .swiper-palette
         position: absolute
         top: calc(50% - 60px + 60px)

@@ -16,7 +16,7 @@
 
 .btn, .btn-download > span:last-child,
 .btn-download:hover > span:last-child,
-.btn-download:visited > span:last-child, #intro > span > span:last-child, #intro.logo > span > span:last-child, .single-event h1, .event-details li > span:last-child {
+.btn-download:visited > span:last-child, #intro > span > span:last-child, #intro.logo > span > span:last-child, .single-event h1, .event-details li > span:last-child, footer {
   font-family: "Mann";
   font-weight: 700;
   font-style: normal;
@@ -357,7 +357,7 @@ html, body {
 }
 
 body.dark {
-  background-color: #000;
+  background-color: #121212;
 }
 
 a, a:hover, a:visited {
@@ -714,6 +714,13 @@ body > .app {
   }
   #intro.logo > span > span:last-child {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #intro.logo {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -1135,6 +1142,27 @@ body > .app {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .section-home-project-desktop {
+    display: none;
+  }
+  .section-home-project-mobile {
+    display: block;
+  }
+  .section-home-project-mobile .project-item {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .section-home-project-desktop {
+    display: block;
+  }
+  .section-home-project-mobile {
+    display: none;
+  }
+}
+
 .home-project-background {
   position: fixed;
   top: 0;
@@ -1218,9 +1246,11 @@ body > .app {
   transition: all 800ms ease;
 }
 
-.swiper-box-home-projects .swiper-button-next:hover .circle .foreground, .swiper-box-home-projects .swiper-button-prev:hover .circle .foreground {
-  stroke-dashoffset: 0;
-  transform: rotate(-90deg);
+@media screen and (min-width: 992px) {
+  .swiper-box-home-projects .swiper-button-next:hover .circle .foreground, .swiper-box-home-projects .swiper-button-prev:hover .circle .foreground {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+  }
 }
 
 .swiper-box-home-projects .swiper-palette {
@@ -1531,9 +1561,11 @@ body > .app {
   transition: all 800ms ease;
 }
 
-.swiper-box-projects .swiper-button-next:hover .circle .foreground, .swiper-box-projects .swiper-button-prev:hover .circle .foreground {
-  stroke-dashoffset: 0;
-  transform: rotate(-90deg);
+@media screen and (min-width: 992px) {
+  .swiper-box-projects .swiper-button-next:hover .circle .foreground, .swiper-box-projects .swiper-button-prev:hover .circle .foreground {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+  }
 }
 
 .swiper-box-projects .swiper-palette {
@@ -1593,6 +1625,10 @@ body > .app {
   -moz-filter: blur(30px);
   -o-filter: blur(30px);
   -ms-filter: blur(30px);
+}
+
+.event-item > a {
+  display: block;
 }
 
 .event-item .date {
@@ -1669,19 +1705,20 @@ body > .app {
   visibility: hidden;
 }
 
-.event-item:hover .figure-wrap .circle {
-  opacity: 1;
-  top: 15px;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
-}
-
-.event-item:hover .figure-wrap .circle > a, .event-item:hover .figure-wrap .circle > span {
-  opacity: 1;
-  visibility: visible;
+@media screen and (min-width: 992px) {
+  .event-item:hover .figure-wrap .circle {
+    opacity: 1;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+  }
+  .event-item:hover .figure-wrap .circle > a, .event-item:hover .figure-wrap .circle > span {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .swiper-box-events {
@@ -1736,9 +1773,11 @@ body > .app {
   transition: all 800ms ease;
 }
 
-.swiper-box-events .swiper-button-next:hover .circle .foreground, .swiper-box-events .swiper-button-prev:hover .circle .foreground {
-  stroke-dashoffset: 0;
-  transform: rotate(-90deg);
+@media screen and (min-width: 992px) {
+  .swiper-box-events .swiper-button-next:hover .circle .foreground, .swiper-box-events .swiper-button-prev:hover .circle .foreground {
+    stroke-dashoffset: 0;
+    transform: rotate(-90deg);
+  }
 }
 
 .swiper-box-events .swiper-palette {
@@ -1905,6 +1944,137 @@ body > .app {
   left: 0;
   right: 0;
   background-color: #121212;
+}
+
+.page:not(.front-page) footer {
+  background-color: #121212;
+}
+
+footer {
+  position: relative;
+  color: #FFF;
+  padding: 4rem 0;
+  font-size: 0.8rem;
+}
+
+footer a, footer a:visited {
+  color: #F2C53D;
+}
+
+footer a:hover {
+  color: #FFF;
+}
+
+footer > .row > [class*="col-"],
+footer > .container > .row > [class*="col-"] {
+  margin-bottom: 30px;
+}
+
+footer .social-menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 30px;
+}
+
+footer .social-menu li {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 15px;
+}
+
+footer .social-menu li a, footer .social-menu li a:visited, footer .social-menu li a:hover {
+  color: #F2C53D;
+  font-weight: 700;
+}
+
+footer .social-menu li i {
+  display: none;
+  color: #F2C53D;
+  font-size: 1rem;
+}
+
+footer .footer-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+footer .footer-logos li {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 15px;
+}
+
+footer .footer-logos li a {
+  display: block;
+}
+
+@media screen and (max-width: 575px) {
+  footer .footer-logos.first img {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  footer .footer-logos.second {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer .footer-logos.second {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  footer .footer-logos.second {
+    justify-content: flex-end;
+  }
+}
+
+footer .footer-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: -7px;
+  margin-right: -7px;
+}
+
+footer .footer-menu li {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 15px;
+}
+
+footer .footer-menu li a, footer .footer-menu li a:visited, footer .footer-menu li a:hover {
+  color: #F2C53D;
+  font-weight: 700;
+}
+
+footer .footer-menu li i {
+  display: none;
+  color: #F2C53D;
+  font-size: 1rem;
+}
+
+footer .footer-title {
+  font-size: 1rem;
+  color: #F2C53D;
+  font-weight: 700;
+}
+
+footer .address {
+  margin-bottom: 30px;
+}
+
+footer .address .title {
+  color: #F2C53D;
 }
 
 html, body {

@@ -1,6 +1,9 @@
+// body:not(.front-page) footer,
+.page:not(.front-page) footer
+    background-color: $color-00
+
 footer
     position: relative
-    background-color: $color-10
     color: $color-ff
     padding: 4rem 0
     @extend %font-1-bold
@@ -34,6 +37,30 @@ footer
                 color: $color-20
                 font-size: 1rem
     
+    .footer-logos
+        display: flex
+        flex-direction: row
+        align-items: center
+        margin-left: -15px
+        margin-right: -15px
+        li
+            padding-left: 15px
+            padding-right: 15px
+            margin-bottom: 15px
+            a
+                display: block
+        &.first
+            @media screen and (max-width: 575px)
+                img
+                    width: 80%
+        &.second
+            @media screen and (max-width: 575px)
+                flex-wrap: wrap
+            @media screen and (max-width: 991px)
+                margin-top: 15px
+            @media screen and (min-width: 992px)
+                justify-content: flex-end
+
     .footer-menu
         display: flex
         flex-direction: row
